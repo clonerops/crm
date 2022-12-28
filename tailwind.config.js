@@ -13,7 +13,10 @@ module.exports = {
         "IRANSansUltraLight": ["IRANSansUltraLight"],
       },
       colors: {
-        "primary": "#FF5B00"
+        "primary": "#FF5B00",
+        "secondary": "#243763",
+        "thirdy": "#FFEBB7",
+        "fourty": "#AD8E70",
       }
     },
   },

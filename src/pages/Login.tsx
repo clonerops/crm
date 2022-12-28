@@ -1,16 +1,26 @@
 import { useState } from "react";
 import crmVideo from "../assets/crm1.mp4";
 import saipalogo from "../assets/images/logo.png";
-import { EyeIcon, EyeSlashIcon, UserIcon } from "@heroicons/react/24/outline";
+import {
+    EyeIcon,
+    EyeSlashIcon,
+    UserIcon,
+    LockClosedIcon,
+} from "@heroicons/react/24/outline";
+import Recaptcha from "../components/Recaptcha";
 const Login = () => {
     const [showPassword, setShowPassword] = useState<boolean>(false);
+    const [recaptchaValue, setRecaptchaValue] = useState<string>("");
+    const [captchaValue, setCaptchaValue] = useState<null>();
+    const [refresh, setRefresh] = useState<boolean>(false);
 
     const handleShowPassword = () => setShowPassword((prev) => !prev);
 
     return (
         <>
-            <div className="container grid min-h-screen min-w-full grid-cols-1 overflow-hidden md:grid-cols-3">
-                <div className="flex w-full flex-col justify-center">
+            <div className="containe grid min-h-screen min-w-full grid-cols-1 justify-around overflow-hidden pt-10 md:grid-cols-3">
+                <div />
+                <div className="flex w-full flex-col border pt-20 shadow-md shadow-slate-200">
                     <img
                         width={64}
                         height={64}
@@ -49,8 +59,22 @@ const Login = () => {
                                 />
                             )}
                         </section>
+                        <section className="mr-2">
+                            <Recaptcha
+                                setCaptchaValue={setCaptchaValue}
+                                refresh={refresh}
+                            />
+                        </section>
                         <section className="relative flex">
-                            <button className="m-1 w-full rounded-lg bg-primary p-4 font-IRANSans text-[1.4rem] text-white shadow-sm shadow-primary transition hover:bg-orange-500">
+                            <input
+                                type="text"
+                                className="m-2 w-full rounded-lg border border-gray-300 p-3 text-center font-IRANSans text-[1.3rem] text-sm shadow-md shadow-slate-200 outline-none transition focus-within:border-gray-400 focus-within:bg-slate-200"
+                                placeholder="کد امنیتی"
+                            />
+                            <LockClosedIcon className="absolute left-8 top-6 h-[18px] w-[18px] font-IRANSansBold text-gray-500" />
+                        </section>
+                        <section className="relative flex">
+                            <button className="m-2 w-full rounded-lg bg-secondary p-4 font-IRANSans text-[1.4rem] text-white shadow-sm shadow-secondary transition hover:bg-indigo-800">
                                 ورود
                             </button>
                         </section>
@@ -64,15 +88,16 @@ const Login = () => {
                         </a>
                     </section>
                 </div>
-                <div className="bg-login relative col-span-2 m-auto hidden md:block ">
+                {/* <div></div>
+                <div className=" col-span-1">
                     <video autoPlay muted id="myVideo">
                         <source src={crmVideo} type="video/mp4" />
                     </video>
-                </div>
+                </div> */}
                 <div className="absolute bottom-0 right-0 left-0">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 1440 200"
+                        viewBox="0 0 1240 200"
                     >
                         <path
                             fill="#ff5500"
