@@ -93,10 +93,11 @@ const Login = () => {
                         <source src={crmVideo} type="video/mp4" />
                     </video>
                 </div>
-                <div className="absolute bottom-0 right-0 left-0">
+            </div>
+            <div className="absolute bottom-0 right-0 left-0">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 1440 320"
+                        viewBox="0 0 1440 200"
                     >
                           
                         <path
@@ -106,7 +107,7 @@ const Login = () => {
                         ></path>
                     </svg>{" "}
                 </div>
-            </div>
+
         </>
     );
 };
