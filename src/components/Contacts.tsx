@@ -1,3 +1,4 @@
+import CheckboxAndLabel from "./Modules/CheckboxAndLabel";
 import InputAndLabel from "./Modules/InputAndLabel";
 import SelectAndLabel from "./Modules/SelectAndLabel";
 import TextareaAndInput from "./Modules/TextareaAndInput";
@@ -32,6 +33,9 @@ const Contacts = () => {
             </section>
             <section className="flex flex-col">
                 <SelectAndLabel title="موضوع تماس" />
+            </section>
+            <section className="flex flex-col">
+                <CheckboxAndLabel title="پیگیری ویژه" />
             </section>
             <section className="col-span-3 flex flex-col">
                 <TextareaAndInput title="توضیحات" />
