@@ -1,11 +1,13 @@
-import Contacts from "../../components/Contacts"
+import Contacts from "../../components/Contacts";
 
 const Index = () => {
-  return (
-    <div>
-        <Contacts />
-    </div>
-  )
-}
+    return (
+        <div>
+            <section className="mt-20">
+                <Contacts />
+            </section>
+        </div>
+    );
+};
 
-export default Index
+export default Index;

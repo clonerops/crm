@@ -9,7 +9,7 @@ interface IProps {
 const CheckboxAndLabel: FC<IProps> = ({ title, defaultValue, disable }) => {
     return (
         <section className="flex items-center p-2">
-            <label className="inline-block w-[130px] pl-2 text-left font-IRANSans text-xl">
+            <label className="inline-block w-[150px] pl-2 text-left font-IRANSans text-xl">
                 {title}:
             </label>
             <input
